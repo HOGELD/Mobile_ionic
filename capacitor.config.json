@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "myApp",
+  "appId": "com.example.houseofgrace",
+  "appName": "HouseOfGrace",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

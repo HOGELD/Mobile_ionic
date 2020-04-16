@@ -1,7 +1,7 @@
 {
-  "name": "myApp",
+  "name": "HouseOfGraceEldoret",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Sharbel Chris",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -56,5 +56,5 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project"
+  "description": "This is a Church App for House of Grace CHurch - Eldoret. Used to show events, updates and for the user to manage their account"
 }

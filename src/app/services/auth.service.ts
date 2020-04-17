@@ -5,11 +5,11 @@ import {Platform} from '@ionic/angular';
 import {Router} from '@angular/router';
 import { BehaviorSubject, Observable, from, of } from 'rxjs';
 import { take, map, switchMap } from 'rxjs/operators';
-import {Plugins} from '@capacitor/core';
-
+// import {Plugins} from '@capacitor/core';
+import { Storage } from '@ionic/storage';
 const helper = new JwtHelperService();
 const TOKEN_KEY = 'jwt-token';
-const { Storage } = Plugins;
+// const { Storage } = Plugins;
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,7 @@ export class AuthService {
   private userData = new BehaviorSubject(null);
 
   constructor(
+      private storage: Storage,
       private http: HttpClient,
       private plt: Platform,
       private router: Router
@@ -31,7 +32,7 @@ export class AuthService {
 
     this.user = platformObs.pipe(
         switchMap(() => {
-          return from(Storage.get({key: TOKEN_KEY}));
+          return from(this.storage.get(TOKEN_KEY));
         }), map (token => {
           if (token) {
             // @ts-ignore
@@ -46,28 +47,27 @@ export class AuthService {
   }
 
   login(credentials: {email: string, pw: string }) {
+    console.log('credentials', credentials);
     // Normally make a POST request to your APi with your login credentials
-    if (credentials.email != 'saimon@devdactic.com' || credentials.pw != '123') {
+    if (credentials.email !== 'saimon@devdactic.com' || credentials.pw !== '123') {
       return of(null);
     }
 
     return this.http.get('https://randomuser.me/api/').pipe(
         take(1),
         map(res => {
+          console.log('res res', res);
           // Extract the JWT, here we just fake it
           return `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE1Njc2NjU3MDYsImV4cCI6MTU5OTIwMTcwNiwiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoiMTIzNDUiLCJmaXJzdF9uYW1lIjoiU2ltb24iLCJsYXN0X25hbWUiOiJHcmltbSIsImVtYWlsIjoic2FpbW9uQGRldmRhY3RpYy5jb20ifQ.4LZTaUxsX2oXpWN6nrSScFXeBNZVEyuPxcOkbbDVZ5U`;
         }),
         switchMap(token => {
+          console.log('token', token);
           const decoded = helper.decodeToken(token);
+          console.log('decoded', decoded);
           this.userData.next(decoded);
-          Storage.set({
-            key: 'user',
-            value: JSON.stringify({
-              id: 1,
-              name: 'Max'
-            })
-          })
-          const storageObs = from(Storage.set({key: TOKEN_KEY, value: token}));
+          const storageObs = from(this.storage.set(TOKEN_KEY, token));
+          console.log('storageObs', storageObs);
+          console.log('storage location', this.storage.set(TOKEN_KEY, token));
           return storageObs;
         })
     );
@@ -78,7 +78,7 @@ export class AuthService {
   }
 
   logout() {
-    Storage.remove({ key: TOKEN_KEY})
+    this.storage.remove(TOKEN_KEY)
     .then(() => {
       this.router.navigateByUrl('/');
       this.userData.next(null);

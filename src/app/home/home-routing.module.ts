@@ -39,14 +39,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/home/tab1',
+        redirectTo: 'tab1',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/home/tab1',
+    redirectTo: 'home',
     pathMatch: 'full'
   }
 ];

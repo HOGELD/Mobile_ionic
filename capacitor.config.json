@@ -1,6 +1,6 @@
 {
-  "appId": "com.example.houseofgrace",
-  "appName": "HouseOfGrace",
+  "appId": "com.houseofgrace.app",
+  "appName": "HouseOfGraceEldoret",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

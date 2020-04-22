@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+._content {
+  padding: 0;
+  background-image: linear-gradient(#64b5f6, #4fc3f7);
+  height: 100%;
+}
+
+.top_{
+  position: relative;
+  height: 300px;
+  //z-index: 1;
+  background-image: linear-gradient(#ffffff, #ffffff);
+  border-bottom-left-radius: 70% 30%;
+  border-bottom-right-radius: 70% 30%;
+
+  .img_ {
+    height: 220px;
+    width: 220px;
+    padding: 20px;
+    position: relative;
+    left: 30px;
+    top: 30px;
+
+  }
+ p {
+  text-align: center;
+   color: #64b5f6;
+   font-family: 'Noto Sans', sans-serif;
+   font-size: 1.15rem;
+   position: relative;
+   bottom: 25px;
+}
+
+}
+
+  .button_cls {
+    position: relative;
+    top: 22px;
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+//ion-button.ion-color-primary {
+//  --ion-color-base: linear-gradient(
+//                  to bottom,
+//                  var(--ion-color-primary) 0%,
+//                  var(--ion-color-primary-contrast) 100%
+//  ) !important;
+//}
+
+

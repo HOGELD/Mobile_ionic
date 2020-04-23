@@ -34,17 +34,20 @@
 }
 
   .button_cls {
-    position: relative;
-    top: 22px;
+    //position: relative;
+    //top: 22px;
     font-family: 'Noto Sans', sans-serif;
   }
 
-//ion-button.ion-color-primary {
-//  --ion-color-base: linear-gradient(
-//                  to bottom,
-//                  var(--ion-color-primary) 0%,
-//                  var(--ion-color-primary-contrast) 100%
-//  ) !important;
-//}
+  .button_row {
+    //position: relative;
+    //top: 140px;
+    padding-top: 100px;
+    margin-top: 100px;
 
+    @media only screen and (max-width: 640px) {
+      //position: relative;
+      //top: 40%;
+    }
+  }
 

@@ -1,10 +1,16 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<!--<ion-header>-->
+<!--  <ion-toolbar color="primary">-->
+<!--    <ion-title>login</ion-title>-->
+<!--  </ion-toolbar>-->
+<!--</ion-header>-->
 
-<ion-content class="ion-padding _content"  >
+<ion-content class=" _content"  >
+  <ion-row>
+    <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
+             offset-xl="4">
+      <ion-img class="img_" src="assets/logo.png"></ion-img>
+    </ion-col>
+  </ion-row>
 
   <ion-row>
     <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
@@ -17,13 +23,13 @@
 
         <ion-card-content>
 
-          <ion-item lines="none">
-            <ion-label position="stacked">Email</ion-label>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
             <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="credentials.email"></ion-input>
           </ion-item>
 
-          <ion-item lines="none">
-            <ion-label position="stacked">Password</ion-label>
+          <ion-item >
+            <ion-label position="floating">Password</ion-label>
             <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="credentials.pw">
             </ion-input>
           </ion-item>

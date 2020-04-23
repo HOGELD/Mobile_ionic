@@ -9,7 +9,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'login',
+    path: '',
     loadChildren: () => import('./auth/login/login.module').then(m => m.LoginPageModule)
   },
   {
@@ -21,7 +21,7 @@ const routes: Routes = [
     loadChildren: () => import('./auth/forgot-password/forgot-password.module').then(m => m.ForgotPasswordPageModule)
   },
   {
-    path: '',
+    path: 'start',
     loadChildren: () => import('./auth/start/start.module').then( m => m.StartPageModule)
   }
 ];

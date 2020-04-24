@@ -1,7 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 ._content {
   height: 500px;
+  font-family: 'Noto Sans', sans-serif;
 }
 
+.labels {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #000000;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+
+  @media only screen and (max-width: 415px ) and (min-width: 365px) {
+    font-size: 1.5rem;
+  }
+}
+
+.text_fld {
+  font-size: 1rem;
+  font-family: 'Noto Sans', sans-serif;
+
+  @media only screen and (max-width: 415px ) and (min-width: 365px) {
+    font-size: 1.3rem;
+  }
+
+}
+
+.top_p {
+  text-align: center;
+  position: relative;
+  bottom: 32px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #64b5f6;
+
+  /*  Media Queries
+*/
+
+  //mobile
+  @media only screen and (max-width: 320px) {
+    font-size: .6rem;
+    padding-top: 10px;
+  }
+  @media only screen and (max-width: 360px ) and (min-width: 325px) {
+    font-size: .75rem;
+    left: 10px;
+  }
+  @media only screen and (max-width: 375px ) and (min-width: 363px) {
+    font-size: .75rem;
+    left: 20px;
+  }
+
+  @media only screen and (max-width: 415px ) and (min-width: 378px) {
+    font-size: .9rem;
+    left: 0px;
+  }
+  // tablet
+  @media only screen and (max-width: 770px ) and (min-width: 415px) {
+
+  }
+
+  // large tablet
+  @media only screen and (max-width: 1024px ) and (min-width: 770px) {
+
+  }
+}
+
+.forgot_cls {
+  margin-top: 10px;
+  text-align: center;
+
+  a{
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration: none;
+    letter-spacing: 2px;
+  }
+
+}
+
+.btn_btn {
+  font-family: 'Noto Sans', sans-serif;
+}
 
 .img_ {
   height: 150px;
@@ -16,24 +96,30 @@
 
   //mobile
   @media only screen and (max-width: 320px) {
-    left: 80px;
+    left: 50px;
   }
   @media only screen and (max-width: 360px ) and (min-width: 325px) {
     height: 180px;
     width: 180px;
-    left: 90px;
+    left: 60px;
+  }
+
+  @media only screen and (max-width: 375px ) and (min-width: 363px) {
+    height: 180px;
+    width: 180px;
+    left: 40px;
   }
 
   @media only screen and (max-width: 415px ) and (min-width: 365px) {
     height: 220px;
     width: 220px;
-    left: 80px;
+    left: 65px;
   }
   // tablet
   @media only screen and (max-width: 770px ) and (min-width: 415px) {
     height: 380px;
     width: 380px;
-    left: 50px;
+    left: 60px;
   }
 
   // large tablet

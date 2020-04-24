@@ -4,11 +4,12 @@
 <!--  </ion-toolbar>-->
 <!--</ion-header>-->
 
-<ion-content class=" _content"  >
+<ion-content class="ion-padding _content"  >
   <ion-row>
     <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
              offset-xl="4">
       <ion-img class="img_" src="assets/logo.png"></ion-img>
+        <p  class="top_p" >Doing church as a team</p>
     </ion-col>
   </ion-row>
 
@@ -16,32 +17,39 @@
     <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
              offset-xl="4">
 
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title class="ion-text-center">Your Account</ion-card-title>
-        </ion-card-header>
+            <ion-item class="item_ft">
+            <ion-label class="labels" position="floating">Email</ion-label>
+            <ion-input class="text_fld" type="email" placeholder="Email" name="email" [(ngModel)]="credentials.email"></ion-input>
+             </ion-item>
 
-        <ion-card-content>
-
-          <ion-item>
-            <ion-label position="floating">Email</ion-label>
-            <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="credentials.email"></ion-input>
-          </ion-item>
-
-          <ion-item >
-            <ion-label position="floating">Password</ion-label>
-            <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="credentials.pw">
+          <ion-item class="item_ft">
+            <ion-label class="labels" position="floating">Password</ion-label>
+            <ion-input class="text_fld" type="password" placeholder="Password" name="password" [(ngModel)]="credentials.pw">
             </ion-input>
           </ion-item>
-
-          <ion-button (click)="login()" expand="block">Login</ion-button>
-          <ion-button expand="block" color="secondary" routerLink="/signup" routerDirection="forward">Register
-          </ion-button>
-
-        </ion-card-content>
-      </ion-card>
-
     </ion-col>
   </ion-row>
+
+  <ion-row style="margin-top: 30px">
+    <ion-col size="6" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
+             offset-xl="4">
+        <ion-button class="btn_btn" (click)="login()" expand="block">Login</ion-button>
+    </ion-col>
+      <ion-col size="6" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
+               offset-xl="4">
+          <ion-button class="btn_btn" expand="block" color="secondary" routerLink="/signup" routerDirection="forward">Register
+          </ion-button>
+      </ion-col>
+
+
+  </ion-row>
+    <ion-row  class="forgot_cls" >
+        <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
+                 offset-xl="4">
+            <a routerLink="/forgot-password" routerDirection="forward">
+                Forgot Your Password?
+            </a>
+        </ion-col>
+    </ion-row>
 
 </ion-content>

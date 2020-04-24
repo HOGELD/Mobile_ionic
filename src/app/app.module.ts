@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {IonicStorageModule} from '@ionic/storage';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -21,7 +22,8 @@ import {IonicStorageModule} from '@ionic/storage';
     IonicModule.forRoot(),
     IonicStorageModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     StatusBar,

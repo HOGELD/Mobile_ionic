@@ -14,9 +14,10 @@
     left: 50px;
   }
   @media only screen and (max-width: 360px ) and (min-width: 325px) {
-    height: 180px;
+    height: 130px;
     width: 180px;
     left: 60px;
+    top: -0px;
   }
 
   @media only screen and (max-width: 375px ) and (min-width: 363px) {
@@ -53,11 +54,15 @@
 
   //mobile
   @media only screen and (max-width: 320px) {
-    top: 40px;
+    top: 20px;
   }
   @media only screen and (max-width: 360px ) and (min-width: 325px) {
-    top: 40px;
+    top: 20px;
   }
+  @media only screen and (max-width: 375px ) and (min-width: 363px) {
+    top: 20px;
+  }
+
 }
 
 .label_cls {
@@ -73,13 +78,16 @@
 
   //mobile
   @media only screen and (max-width: 320px) {
-
+    font-size: .8rem;
+    margin: 4px 0px 4px 0px;
   }
   @media only screen and (max-width: 360px ) and (min-width: 325px) {
-
+    font-size: .8rem;
+    margin: 4px 0px 4px 0px;
   }
   @media only screen and (max-width: 375px ) and (min-width: 363px) {
-
+    font-size: .8rem;
+    margin: 4px 0px 4px 0px;
   }
 
   @media only screen and (max-width: 415px ) and (min-width: 378px) {
@@ -100,8 +108,32 @@
   font-size: 1rem;
   font-family: 'Noto Sans', sans-serif;
 
+  /*  Media Queries
+*/
+
+  //mobile
+  @media only screen and (max-width: 320px) {
+    font-size: .9rem;
+  }
+  @media only screen and (max-width: 360px ) and (min-width: 325px) {
+    font-size: .9rem;
+  }
+  @media only screen and (max-width: 375px ) and (min-width: 363px) {
+    font-size: .9rem;
+  }
+
   @media only screen and (max-width: 415px ) and (min-width: 365px) {
     font-size: 1.2rem;
+  }
+
+  // tablet
+  @media only screen and (max-width: 770px ) and (min-width: 415px) {
+
+  }
+
+  // large tablet
+  @media only screen and (max-width: 1024px ) and (min-width: 770px) {
+
   }
 
 }
@@ -123,7 +155,9 @@
     padding-top: 10px;
   }
   @media only screen and (max-width: 360px ) and (min-width: 325px) {
-    font-size: .75rem;
+    font-size: .85rem;
+    //margin-top: 30px;
+    top: -12px;
     left: 10px;
   }
   @media only screen and (max-width: 375px ) and (min-width: 363px) {

@@ -17,6 +17,9 @@ export class SignupPage implements OnInit {
 
   ngOnInit() {
     this.registerCredentialsForm = this.formBuilder.group({
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
+      mobile: ['', Validators.required],
       email: [' ', [Validators.required, Validators.email]],
       password: [' ',
         Validators.compose(
@@ -41,7 +44,7 @@ export class SignupPage implements OnInit {
                 Validators.minLength(8)
             ])
       ],
-         confirmPassword: [null, Validators.compose([Validators.required])]
+      confirmPassword: [null, Validators.compose([Validators.required])]
     }, {
       // check whether our password and confirm password match
       validator: CustomValidators.passwordMatchValidator

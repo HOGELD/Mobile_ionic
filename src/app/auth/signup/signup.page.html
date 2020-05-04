@@ -8,42 +8,50 @@
         <p  class="top_p" >Doing church as a team</p>
       </ion-col>
     </ion-row>
+    <form [formGroup]="registerCredentialsForm" >
     <ion-row>
       <ion-col size="12" size-sm="10" offset-sm="1" size-md="8" offset-md="2" size-lg="6" offset-lg="3" size-xl="4"
                offset-xl="4">
         <ion-item>
-          <ion-label position="floating">First Name</ion-label>
-          <ion-input  type="text" name="firstname"></ion-input>
+          <ion-label class="label_cls" position="stacked">First Name&nbsp;<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input class="text_fld" formControlName="firstname" type="text" name="firstname"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Last Name</ion-label>
-          <ion-input  type="text" name="lastname"></ion-input>
+          <ion-label class="label_cls"  position="stacked">Last Name&nbsp;<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input class="text_fld" formControlName="lastname" type="text" name="lastname"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Mobile Number</ion-label>
-          <ion-input  inputmode="tel" type="tel" name="mobile"></ion-input>
+          <ion-label class="label_cls" position="stacked">Mobile Number&nbsp;<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input class="text_fld"  formControlName="mobile" inputmode="tel" type="number" name="mobile"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Email</ion-label>
-          <ion-input  type="email" name="email"></ion-input>
+          <ion-label class="label_cls" position="stacked">Email&nbsp;<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input class="text_fld" formControlName="email" type="email" name="email"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input  type="password" name="password"></ion-input>
+          <ion-label class="label_cls" position="stacked">Password&nbsp;<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input formControlName="password" class="text_fld" id="pwd" type="password" name="password" [ngClass]="registerCredentialsForm.controls['password'].invalid ? 'is-invalid' : ''"></ion-input>
+          <ion-button class="eye_btn" slot="end" onclick="pwd.type = (pwd.type === 'text') ? 'password' : 'text' ">
+            <ion-icon name="eye"></ion-icon>
+          </ion-button>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Confirm Password</ion-label>
-          <ion-input  type="password" name="confirmPassword"></ion-input>
+          <ion-label class="label_cls"  position="stacked">Confirm Password</ion-label>
+          <ion-input formControlName="confirmPassword" class="text_fld"  id="confirmpwd" type="password" name="confirmPassword" [ngClass]="registerCredentialsForm.controls['confirmPassword'].invalid ? 'is-invalid' : ''"></ion-input>
+          <ion-button class="eye_btn" slot="end" onclick="confirmpwd.type = (confirmpwd.type === 'text') ? 'password' : 'text' ">
+            <ion-icon name="eye"></ion-icon>
+          </ion-button>
         </ion-item>
 
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button expand="block">
+        <ion-button [disabled]="!registerCredentialsForm.valid"  (click)="submit()" expand="block">
           Sign Up
         </ion-button>
       </ion-col>
     </ion-row>
+    </form>
   </ion-grid>
 </ion-content>

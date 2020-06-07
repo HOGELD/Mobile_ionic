@@ -34,6 +34,9 @@
           <ion-button class="eye_btn" slot="end" onclick="pwd.type = (pwd.type === 'text') ? 'password' : 'text' ">
             <ion-icon name="eye"></ion-icon>
           </ion-button>
+          <ion-text color="danger" *ngIf="registerCredentialsForm.controls['password'].hasError('hasNumber')">
+            Not valid
+          </ion-text>
         </ion-item>
         <ion-item>
           <ion-label class="label_cls"  position="stacked">Confirm Password</ion-label>
@@ -47,7 +50,7 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button [disabled]="!registerCredentialsForm.valid"  (click)="submit()" expand="block">
+        <ion-button class="submit_btn" [disabled]="!registerCredentialsForm.valid"  (click)="submit()" expand="block">
           Sign Up
         </ion-button>
       </ion-col>

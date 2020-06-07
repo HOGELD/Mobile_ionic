@@ -27,9 +27,9 @@
   }
 
   @media only screen and (max-width: 415px ) and (min-width: 365px) {
-    height: 220px;
-    width: 220px;
-    left: 65px;
+    height: 120px;
+    width: 200px;
+    left: 68px;
   }
   // tablet
   @media only screen and (max-width: 770px ) and (min-width: 415px) {
@@ -45,10 +45,19 @@
     left: 10px;
   }
 }
+.submit_btn {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.2rem;
+  --background: #64b5f6;
+}
 
 .eye_btn {
   position: relative;
   top: 50px;
+  --background: transparent;
+  --color: grey;
+  --box-shadow: none;
+
   /*  Media Queries
 */
 
@@ -168,6 +177,7 @@
   @media only screen and (max-width: 415px ) and (min-width: 378px) {
     font-size: .9rem;
     left: 0px;
+    top: 0px;
   }
   // tablet
   @media only screen and (max-width: 770px ) and (min-width: 415px) {
